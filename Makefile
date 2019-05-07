@@ -14,7 +14,7 @@ all-debug: build-debug
 
 cmake-release:
 	mkdir -p build/release
-	cd build/release && cmake -D CMAKE_BUILD_TYPE=Release ../..
+	cd build/release && cmake -D CMAKE_BUILD_TYPE=Release -DBOOST_ROOT:PATHNAME=~/boost_1_53_0 ../..
 
 build-release: cmake-release
 	cd build/release && $(MAKE)
